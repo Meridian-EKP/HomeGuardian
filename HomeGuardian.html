@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lauren’s Home Guardian | Home, pet and companion care in West Sussex</title>
+<meta name="description" content="Home guardian, pet sitting, dog walking and companion visits across Littlehampton, Goring, Findon, Storrington, Washington and Pulborough.">
+<meta name="theme-color" content="#0F2530">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Young+Serif&display=swap" rel="stylesheet">
+<style>
+:root{
+  --deep:#0F2530; --ink:#16323C; --sky:#E4EEF0; --paper:#FBFCFC;
+  --glow:#F4B63F; --glow-soft:#FBE3AE; --muted:#4A6068; --line:#CBDADD;
+  --serif:"Young Serif",Georgia,"Times New Roman",serif;
+  --sans:"Figtree",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--sans);font-size:1.0625rem;line-height:1.6;color:var(--ink);background:var(--paper);-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.15;margin:0}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--glow);outline-offset:3px}
+.wrap{width:100%;max-width:1040px;margin:0 auto;padding:0 1.25rem}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:3rem;padding:.7rem 1.4rem;border-radius:999px;font:600 1rem/1 var(--sans);text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn-glow{background:var(--glow);color:var(--deep)}
+.btn-glow:hover{background:var(--glow-soft)}
+.btn-line{border-color:rgba(255,255,255,.45);color:#fff}
+.btn-line:hover{border-color:#fff}
+
+/* Hero */
+.hero{background:var(--deep);color:#fff;overflow:hidden}
+.bar{display:flex;align-items:center;justify-content:space-between;padding-top:1.1rem;padding-bottom:1.1rem}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:var(--serif);font-size:1.2rem;line-height:1.1}
+.brand small{display:block;font:500 .78rem/1.3 var(--sans);color:#A9C0C6;margin-top:.15rem}
+.bar .btn{min-height:2.6rem;padding:.5rem 1.1rem;font-size:.95rem;background:transparent;border-color:var(--glow);color:var(--glow)}
+.hero-grid{display:grid;gap:1.5rem;padding-top:1.5rem}
+.hero h1{font-size:clamp(2.1rem,8.5vw,3.6rem);max-width:15ch}
+.hero .lead{margin-top:1.1rem;color:#C9DADE;max-width:34rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.6rem}
+.scene{display:block;width:100%;height:auto;margin-top:.5rem}
+.win{fill:var(--glow);opacity:.18}
+.halo{fill:var(--glow);opacity:0}
+.lit .win{opacity:1;transition:opacity 1.6s ease .5s}
+.lit .halo{opacity:.22;transition:opacity 2.2s ease .5s}
+
+/* Sections */
+section{padding:3.5rem 0}
+h2{font-size:clamp(1.7rem,6vw,2.4rem);max-width:20ch}
+.sub{margin-top:.8rem;color:var(--muted);max-width:36rem}
+.services{margin-top:2rem;display:grid}
+.svc{display:grid;grid-template-columns:3rem 1fr;gap:1rem;padding:1.4rem 0;border-top:1px solid var(--line)}
+.ico{width:3rem;height:3rem;border-radius:50%;background:var(--sky);display:grid;place-items:center}
+.ico svg{width:1.55rem;height:1.55rem;fill:none;stroke:var(--ink);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.svc h3{font-size:1.3rem}
+.svc p{margin-top:.35rem;color:var(--muted)}
+
+.times{background:var(--sky)}
+.pills{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.5rem;padding:0;list-style:none}
+.pills li{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:.65rem 1.3rem;font-weight:600}
+
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.5rem;padding:0;list-style:none}
+.chips li{border:1.5px solid var(--ink);border-radius:999px;padding:.4rem 1rem;font-weight:500}
+
+/* Contact */
+.contact{background:var(--deep);color:#fff}
+.contact h2{max-width:18ch}
+.contact .sub{color:#C9DADE}
+.cgrid{display:grid;gap:2rem}
+.about p+p{margin-top:.9rem}
+.about p{color:#C9DADE}
+.direct{margin-top:1.4rem;display:grid;gap:.4rem;font-weight:500}
+.direct a{color:var(--glow)}
+form{display:grid;gap:1rem;background:var(--paper);color:var(--ink);padding:1.4rem;border-radius:1.1rem}
+label{display:grid;gap:.35rem;font-weight:600;font-size:.95rem}
+input,select,textarea{font:400 1rem/1.4 var(--sans);color:var(--ink);padding:.8rem .9rem;border:1.5px solid var(--line);border-radius:.7rem;background:#fff;width:100%}
+textarea{min-height:6.5rem;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--glow);border-color:var(--ink)}
+form .btn{background:var(--ink);color:#fff;width:100%}
+form .btn:hover{background:var(--deep)}
+.note{font-size:.85rem;color:var(--muted);font-weight:400}
+
+footer{background:var(--deep);color:#8FA8AF;font-size:.85rem;padding:1.4rem 0 2rem;border-top:1px solid rgba(255,255,255,.1)}
+
+/* Wider screens */
+@media(min-width:760px){
+  body{font-size:1.125rem}
+  .hero-grid{grid-template-columns:1.05fr .95fr;align-items:center;gap:2.5rem;padding-top:2.5rem;padding-bottom:1rem}
+  .scene{margin-top:0}
+  section{padding:5rem 0}
+  .services{grid-template-columns:1fr 1fr;column-gap:3rem}
+  .cgrid{grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .lit .win,.lit .halo{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Lauren’s Home Guardian, home">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><path d="M4 16 17 5l13 11v13H4z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><rect x="13" y="14" width="8" height="8" rx="1" fill="#F4B63F"/></svg>
+      <span>Home Guardian<small>Lauren, West Sussex</small></span>
+    </a>
+    <a class="btn" href="tel:+440000000000">Call Lauren</a>
+  </div>
+
+  <div class="wrap hero-grid" id="top">
+    <div>
+      <h1>Your home and pets, looked after while you’re out.</h1>
+      <p class="lead">A friendly, reliable local guardian for home visits, pet care and companionship. Book an hour, a few hours or a full day.</p>
+      <div class="cta-row">
+        <a class="btn btn-glow" href="#contact">Request a visit</a>
+        <a class="btn btn-line" href="#services">See what I do</a>
+      </div>
+    </div>
+
+    <svg class="scene" id="scene" viewBox="0 0 400 280" role="img" aria-label="A cosy house with its window lit at dusk">
+      <path d="M0 215c60-45 120-60 200-40s140 5 200-25v130H0z" fill="#16323C"/>
+      <path d="M0 245c70-30 150-35 230-18s120 8 170-8v61H0z" fill="#1C3F4B"/>
+      <circle class="halo" cx="200" cy="170" r="95"/>
+      <path d="M135 250V150h130v100z" fill="#E4EEF0"/>
+      <path d="M122 154 200 86l78 68z" fill="#C9DADE"/>
+      <path d="M122 154 200 86l78 68" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round"/>
+      <rect x="236" y="96" width="16" height="32" fill="#C9DADE"/>
+      <rect x="226" y="176" width="26" height="30" rx="2" fill="#16323C"/>
+      <rect class="win" x="229" y="179" width="20" height="24" rx="1"/>
+      <rect x="156" y="190" width="38" height="60" rx="3" fill="#16323C"/>
+      <circle cx="186" cy="222" r="2.5" fill="#F4B63F"/>
+      <circle cx="200" cy="130" r="9" fill="#16323C"/>
+      <circle class="win" cx="200" cy="130" r="6"/>
+      <g fill="#fff" opacity=".7"><circle cx="48" cy="40" r="1.6"/><circle cx="110" cy="64" r="1.2"/><circle cx="330" cy="38" r="1.6"/><circle cx="360" cy="86" r="1.2"/><circle cx="290" cy="60" r="1"/></g>
+    </svg>
+  </div>
+</header>
+
+<main>
+  <section id="services">
+    <div class="wrap">
+      <h2>Care for the people and pets you love</h2>
+      <p class="sub">Whatever you need covered, I’ll treat your home and your routine with the same care as my own.</p>
+      <div class="services">
+        <article class="svc">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 11 12 4l8.5 7M5.5 9.5V20h13V9.5M10 20v-5h4v5"/></svg></div>
+          <div><h3>Home guardian</h3><p>Someone trusted keeping an eye on your home while you’re away or out for the day.</p></div>
+        </article>
+        <article class="svc">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6.5" cy="10" r="1.8"/><circle cx="10.5" cy="6.2" r="1.8"/><circle cx="15.5" cy="6.2" r="1.8"/><circle cx="19" cy="10" r="1.8"/><path d="M12.8 11.5c-3 0-5.6 3.4-5.6 6 0 1.6 1.4 2.3 2.8 2 .9-.2 1.7-.5 2.8-.5s1.9.3 2.8.5c1.4.3 2.8-.4 2.8-2 0-2.600-2.600-6-5.600-6z"/></svg></div>
+          <div><h3>Pet sitting</h3><p>Feeding, cuddles and company in the comfort of their own home.</p></div>
+        </article>
+        <article class="svc">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8.5a2.500 2.500 0 1 0-3.500 2.300 2.500 2.500 0 1 0 2.300 3.500L16 9.200M16 9.200l1.200-1.200a2.500 2.500 0 1 1 3.500 3.500 2.500 2.500 0 1 1-2.300 3.500L8 14.800" transform="rotate(8 12 12)"/></svg></div>
+          <div><h3>Dog walking</h3><p>Regular walks that fit around your day, whether it’s a quick loop or a longer ramble.</p></div>
+        </article>
+        <article class="svc">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7.500-4.500-7.500-10A4.200 4.200 0 0 1 12 7.600 4.200 4.200 0 0 1 19.500 10c0 5.500-7.500 10-7.500 10z"/></svg></div>
+          <div><h3>Companion visits</h3><p>Friendly company and a helping hand: lifts to and from appointments, trips out, shopping and light meal preparation.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="times">
+    <div class="wrap">
+      <h2>Time that suits you</h2>
+      <p class="sub">Choose the amount of care you need, from a short visit to a whole day.</p>
+      <ul class="pills">
+        <li>1 hour</li>
+        <li>3 hours</li>
+        <li>All day</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="area">
+    <div class="wrap">
+      <h2>Local to you</h2>
+      <p class="sub">Covering the coast and the villages inland, from Littlehampton to Goring and up to Pulborough.</p>
+      <ul class="chips">
+        <li>Littlehampton</li>
+        <li>Goring</li>
+        <li>Findon Valley</li>
+        <li>Washington</li>
+        <li>Storrington</li>
+        <li>West Chiltington</li>
+        <li>Pulborough</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap cgrid">
+      <div class="about">
+        <h2>Let’s talk about what you need</h2>
+        <p class="sub">Tell me a little about your home, your pets or the help you’re after, and I’ll get back to you personally.</p>
+        <div class="direct">
+          <a href="tel:+440000000000">07000 000000</a>
+          <a href="mailto:hello@example.com">hello@example.com</a>
+        </div>
+      </div>
+
+      <form id="enquiry">
+        <label>Your name
+          <input name="name" autocomplete="name" required>
+        </label>
+        <label>What do you need?
+          <select name="need">
+            <option>Home guardian</option>
+            <option>Pet sitting</option>
+            <option>Dog walking</option>
+            <option>Companion visit</option>
+            <option>Something else</option>
+          </select>
+        </label>
+        <label>Where are you?
+          <input name="place" placeholder="Town or village" autocomplete="address-level2">
+        </label>
+        <label>A few details
+          <textarea name="msg" placeholder="Dates, how long, anything I should know"></textarea>
+        </label>
+        <button class="btn" type="submit">Send my enquiry</button>
+        <p class="note">This opens your email app with the details filled in.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="yr">2026</span> Lauren’s Home Guardian. Design preview, details to be confirmed.</div>
+</footer>
+
+<script>
+(function(){
+  var s=document.getElementById('scene');
+  function on(){s.classList.add('lit')}
+  if(document.readyState==='complete'){requestAnimationFrame(on)}else{window.addEventListener('load',function(){requestAnimationFrame(on)})}
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  document.getElementById('enquiry').addEventListener('submit',function(e){
+    e.preventDefault();
+    var f=e.target;
+    var body='Hello Lauren,\n\nI’d like to ask about: '+f.need.value+'\nLocation: '+f.place.value+'\n\n'+f.msg.value+'\n\nThanks,\n'+f.name.value;
+    window.location.href='mailto:hello@example.com?subject='+encodeURIComponent('Enquiry from '+f.name.value)+'&body='+encodeURIComponent(body);
+  });
+})();
+</script>
+</body>
+</html>
